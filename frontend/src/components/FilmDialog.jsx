@@ -37,7 +37,7 @@ export default function FilmDialog({ film, onClose }) {
                 {film.title}
               </h3>
               <span className="text-xs uppercase tracking-[0.25em] text-[#c75d3b]">
-                {film.category} · {film.year}
+                {film.year}
               </span>
             </div>
           </div>

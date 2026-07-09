@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 
@@ -46,56 +46,25 @@ function FilmCard({ film, index, onPlay }) {
           {film.year}
         </span>
       </div>
-      <p className="mt-1 text-[0.65rem] uppercase tracking-[0.3em] text-[#a8a29a]">
-        {film.category}
-      </p>
     </motion.button>
   );
 }
 
 export default function Showreel({ films, onPlay }) {
-  const [filter, setFilter] = useState("All");
-  const categories = useMemo(
-    () => ["All", ...Array.from(new Set(films.map((f) => f.category)))],
-    [films]
-  );
-  const shown = filter === "All" ? films : films.filter((f) => f.category === filter);
-
   return (
     <section
       id="films"
       data-testid="showreel-section"
       className="mx-auto max-w-7xl px-6 py-24 md:px-12 md:py-32"
     >
-      <div className="mb-12 flex flex-col gap-8 border-t border-[#e6e2da] pt-10 md:flex-row md:items-end md:justify-between">
-        <div>
-          <p className="mb-3 text-xs uppercase tracking-[0.4em] text-[#c75d3b]">
-            Selected Work · {films.length} Films
-          </p>
-          <h2 className="font-serif-display text-4xl font-light leading-tight tracking-tight text-[#1c1b1a] md:text-5xl">
-            Films we made <span className="italic">happen.</span>
-          </h2>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          {categories.map((c) => (
-            <button
-              key={c}
-              data-testid={`filter-${c.toLowerCase().replace(/\s+/g, "-")}`}
-              onClick={() => setFilter(c)}
-              className={`rounded-full border px-4 py-2 text-[0.65rem] uppercase tracking-[0.2em] transition-colors duration-300 ${
-                filter === c
-                  ? "border-[#1c1b1a] bg-[#1c1b1a] text-[#f7f5f0]"
-                  : "border-[#e6e2da] text-[#5c5a56] hover:border-[#c75d3b] hover:text-[#c75d3b]"
-              }`}
-            >
-              {c}
-            </button>
-          ))}
-        </div>
+      <div className="mb-12 border-t border-[#e6e2da] pt-10">
+        <h2 className="font-serif-display text-4xl font-light leading-tight tracking-tight text-[#1c1b1a] md:text-5xl">
+          Films we made <span className="italic">happen.</span>
+        </h2>
       </div>
 
       <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-        {shown.map((film, i) => (
+        {films.map((film, i) => (
           <FilmCard key={film.id} film={film} index={i} onPlay={onPlay} />
         ))}
       </div>
