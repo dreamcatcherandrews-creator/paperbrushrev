@@ -63,7 +63,7 @@ class ContactSubmission(BaseModel):
 # ----------------------------- Seed data -----------------------------
 FEATURED = {
     "id": "featured-ai-short",
-    "title": "The First Cut — An AI Short",
+    "title": "Where Do The Strays Go — An AI Short",
     "category": "Featured Film",
     "year": "2024",
     "provider": "youtube",
