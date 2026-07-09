@@ -50,7 +50,7 @@ export default function Navbar() {
             <span className="font-serif-display text-3xl uppercase tracking-[0.12em] text-[#1c1b1a] transition-colors duration-300 group-hover:text-[#c75d3b] md:text-4xl">
               Paper &amp; Brush
             </span>
-            <span className="mt-1 text-[0.7rem] uppercase tracking-[0.55em] text-[#5c5a56] md:text-xs">
+            <span className="mt-1 block text-center text-[0.7rem] uppercase tracking-[0.55em] text-[#5c5a56] md:text-xs">
               Pictures
             </span>
           </span>
