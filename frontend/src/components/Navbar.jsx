@@ -38,14 +38,22 @@ export default function Navbar() {
         <button
           data-testid="nav-logo"
           onClick={() => go("#top")}
-          className="group flex items-center text-left"
+          className="group flex items-center gap-3 text-left"
         >
           <img
-            src={SITE.logoHorizontal}
+            src={SITE.logoUnit}
             alt={SITE.name}
-            className="h-20 w-auto object-contain transition-opacity duration-300 group-hover:opacity-80 md:h-28"
+            className="h-16 w-auto object-contain mix-blend-multiply md:h-20"
             draggable={false}
           />
+          <span className="flex flex-col leading-none">
+            <span className="font-serif-display text-3xl uppercase tracking-[0.12em] text-[#1c1b1a] transition-colors duration-300 group-hover:text-[#c75d3b] md:text-4xl">
+              Paper &amp; Brush
+            </span>
+            <span className="mt-1 text-[0.7rem] uppercase tracking-[0.55em] text-[#5c5a56] md:text-xs">
+              Pictures
+            </span>
+          </span>
         </button>
 
         <nav className="hidden items-center gap-10 md:flex">
