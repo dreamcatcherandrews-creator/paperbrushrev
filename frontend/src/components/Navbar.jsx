@@ -43,7 +43,7 @@ export default function Navbar() {
           <img
             src={SITE.logoHorizontal}
             alt={SITE.name}
-            className="h-14 w-auto object-contain transition-opacity duration-300 group-hover:opacity-80 md:h-20"
+            className="h-20 w-auto object-contain transition-opacity duration-300 group-hover:opacity-80 md:h-28"
             draggable={false}
           />
         </button>
