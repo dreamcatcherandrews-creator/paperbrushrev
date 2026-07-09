@@ -1,5 +1,5 @@
 import React from "react";
-import { Dialog, DialogContent, DialogTitle } from "./ui/dialog";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "./ui/dialog";
 
 export default function FilmDialog({ film, onClose }) {
   const open = Boolean(film);
@@ -16,6 +16,9 @@ export default function FilmDialog({ film, onClose }) {
         className="max-w-5xl w-[95vw] border-none bg-[#0d0c0b] p-0 shadow-2xl"
       >
         <DialogTitle className="sr-only">{film?.title || "Film"}</DialogTitle>
+        <DialogDescription className="sr-only">
+          {film ? `${film.category} · ${film.year}` : "Film player"}
+        </DialogDescription>
         {film && (
           <div>
             <div className="aspect-video w-full bg-black">
