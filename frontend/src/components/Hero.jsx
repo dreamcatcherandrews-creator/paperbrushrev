@@ -83,7 +83,7 @@ export default function Hero() {
           className="relative mx-auto w-full max-w-md"
         >
           <img
-            src={SITE.logo}
+            src={SITE.logoUnit}
             alt="Paper & Brush Pictures"
             className="w-full select-none mix-blend-multiply"
             draggable={false}

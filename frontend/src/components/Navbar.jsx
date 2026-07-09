@@ -42,10 +42,9 @@ export default function Navbar() {
         >
           <span className="relative block h-12 w-12 shrink-0 overflow-hidden md:h-14 md:w-14">
             <img
-              src={SITE.logo}
+              src={SITE.logoUnit}
               alt={SITE.name}
-              className="absolute left-1/2 top-1/2 h-[230%] w-[230%] -translate-x-1/2 -translate-y-1/2 object-contain mix-blend-multiply"
-              style={{ objectPosition: "center 27%" }}
+              className="absolute left-1/2 top-1/2 h-[135%] w-[135%] -translate-x-1/2 -translate-y-1/2 object-contain mix-blend-multiply"
               draggable={false}
             />
           </span>

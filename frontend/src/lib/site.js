@@ -6,6 +6,8 @@ export const SITE = {
   city: "Mumbai",
   logo:
     "https://customer-assets.emergentagent.com/job_minimal-portfolio-166/artifacts/0s3xlhqn_ChatGPT%20Image%20Jul%209%2C%202026%2C%2001_00_18%20PM.png",
+  logoUnit:
+    "https://customer-assets.emergentagent.com/job_minimal-portfolio-166/artifacts/kgapoc3x_P%26B%20logo%20unit.png",
   email: "creator@paperbrushpictures.com",
   phone: "+91 98212 04202",
   phoneHref: "tel:+919821204202",
