@@ -11,6 +11,8 @@ export const SITE = {
   phoneHref: "tel:+919821204202",
   address:
     "G/604 Spring Grove Uno, Lokhandwala Township, Kandivali East, Mumbai 400100",
+  registeredOffice:
+    "Paper & Brush Pictures OPC Private Limited\nPulimmoottu Parambil, Kajiramchira\nAlappuzha, Kerala 688007",
   socials: [
     { label: "Vimeo", href: "https://vimeo.com" },
     { label: "Instagram", href: "https://www.instagram.com/" },

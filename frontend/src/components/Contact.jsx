@@ -88,6 +88,14 @@ export default function Contact() {
               </p>
             </div>
             <div>
+              <p className="mb-2 text-[0.65rem] uppercase tracking-[0.35em] text-[#8a8781]">
+                Registered Office
+              </p>
+              <p className="max-w-xs whitespace-pre-line text-lg leading-relaxed text-[#e6e2da]">
+                {SITE.registeredOffice}
+              </p>
+            </div>
+            <div>
               <p className="mb-3 text-[0.65rem] uppercase tracking-[0.35em] text-[#8a8781]">
                 Elsewhere
               </p>
