@@ -3,10 +3,9 @@ import { Menu, X } from "lucide-react";
 import { SITE } from "../lib/site";
 
 const LINKS = [
-  { label: "Reel", href: "#reel" },
-  { label: "Films", href: "#films" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Our Palette", href: "#reel", id: "our-palette" },
+  { label: "Behind the Brush", href: "#about", id: "behind-the-brush" },
+  { label: "The Easel", href: "#contact", id: "the-easel" },
 ];
 
 export default function Navbar() {
@@ -53,7 +52,7 @@ export default function Navbar() {
           {LINKS.map((l) => (
             <button
               key={l.href}
-              data-testid={`nav-link-${l.label.toLowerCase()}`}
+              data-testid={`nav-link-${l.id}`}
               onClick={() => go(l.href)}
               className="relative text-xs uppercase tracking-[0.28em] text-[#5c5a56] transition-colors duration-300 hover:text-[#1c1b1a] after:absolute after:-bottom-1 after:left-0 after:h-px after:w-0 after:bg-[#c75d3b] after:transition-all after:duration-300 hover:after:w-full"
             >
@@ -78,7 +77,7 @@ export default function Navbar() {
             {LINKS.map((l) => (
               <button
                 key={l.href}
-                data-testid={`nav-mobile-link-${l.label.toLowerCase()}`}
+                data-testid={`nav-mobile-link-${l.id}`}
                 onClick={() => go(l.href)}
                 className="border-b border-[#e6e2da]/60 py-4 text-left text-sm uppercase tracking-[0.28em] text-[#5c5a56]"
               >
