@@ -23,7 +23,7 @@ export default function FeaturedFilm({ film, onPlay }) {
               The Reel
             </p>
             <h2 className="font-serif-display text-4xl font-light leading-tight tracking-tight text-[#1c1b1a] md:text-5xl">
-              A single frame, held to the light.
+              Where light first meets story.
             </h2>
           </div>
         </div>
