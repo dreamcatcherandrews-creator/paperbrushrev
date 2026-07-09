@@ -38,9 +38,9 @@ export default function Hero() {
             variants={item}
             className="font-serif-display text-5xl font-light leading-[0.98] tracking-tight text-[#1c1b1a] sm:text-6xl lg:text-7xl"
           >
-            Stories drawn in light,
+            From Paper
             <span className="mt-2 block italic text-[#c75d3b]">
-              painted frame by frame.
+              to Picture.
             </span>
           </motion.h1>
 
@@ -48,9 +48,10 @@ export default function Hero() {
             variants={item}
             className="mt-8 max-w-md text-base leading-relaxed text-[#5c5a56] md:text-lg"
           >
-            A boutique film studio where every scene begins on paper and
-            finds its breath through the brush. We make images that linger
-            long after the reel goes dark.
+            Born from the spirit of a curious child with paper, a brush, and an
+            endless sense of wonder, we create films that are imagined by hand
+            and crafted with intention. Every frame is drawn from curiosity,
+            painted with emotion, and made to endure.
           </motion.p>
 
           <motion.div variants={item} className="mt-10 flex flex-wrap items-center gap-4">
