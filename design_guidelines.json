@@ -1,0 +1,103 @@
+{
+  "theme_and_colors": {
+    "strategy": "Organic & Earthy / Minimalist Poetic Gallery",
+    "light_theme": true,
+    "colors": {
+      "background": "#F7F5F0",
+      "text_primary": "#1C1B1A",
+      "text_secondary": "#5C5A56",
+      "accent": "#C75D3B",
+      "border": "#E6E2DA"
+    },
+    "surface_styles": {
+      "header": "backdrop-blur-xl bg-[#F7F5F0]/80 border-b border-[#E6E2DA]/50",
+      "inputs": "bg-transparent border-b border-[#E6E2DA] focus:border-[#C75D3B] outline-none rounded-none",
+      "cards_grid": "bg-transparent border-none"
+    }
+  },
+  "typography": {
+    "headings": {
+      "font": "Cormorant Garamond, serif",
+      "weights": "300, 400, 500, 600",
+      "style": "tracking-tight, elegant, poetic"
+    },
+    "body": {
+      "font": "Outfit, sans-serif",
+      "weights": "300, 400, 500",
+      "style": "tracking-wide, highly legible, refined"
+    },
+    "import_code": "<link href=\"https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500&display=swap\" rel=\"stylesheet\">"
+  },
+  "assets": {
+    "logo_url": "https://customer-assets.emergentagent.com/job_minimal-portfolio-166/artifacts/0s3xlhqn_ChatGPT%20Image%20Jul%209%2C%202026%2C%2001_00_18%20PM.png"
+  },
+  "layout_and_sections": {
+    "header": {
+      "type": "Sticky Top Nav",
+      "layout": "Flex space-between. Logo on left (h-12 object-contain), Nav links (Showreel, About, Contact) on right.",
+      "interactions": "Hover states on nav links change to accent color (#C75D3B) with smooth transition."
+    },
+    "hero": {
+      "padding": "py-32 md:py-48",
+      "content": "Poetic headline (e.g., 'Crafting light and shadows into stories.'). Tagline: 'Paper & Brush Pictures. Since 2017.' CTA Buttons: 'View Films' (solid charcoal), 'Get in Touch' (outline charcoal).",
+      "alignment": "Left-aligned or centered, depending on the visual balance, but prioritize massive negative space."
+    },
+    "featured_film": {
+      "padding": "py-24",
+      "content": "Large embedded YouTube player (ID: WmtGrkCIS-M). Container should be responsive, max-w-6xl mx-auto, aspect-video.",
+      "style": "No heavy borders. Maybe a subtle shadow or just pure flat. Generous breathing room around it."
+    },
+    "showreel_grid": {
+      "padding": "py-24",
+      "layout": "Grid cols-1 md:cols-2 lg:cols-3. Gap-8 to gap-12.",
+      "item_structure": "Image wrapper (overflow-hidden, aspect-video), Thumbnail image (vumbnail.com), underneath: Film Title (serif, text-xl), subtle category/role label (sans-serif, text-xs uppercase).",
+      "interactions": "On hover, the image scales slightly (scale-105) within its wrapper. Click opens Dialog with embedded Vimeo player.",
+      "dummy_vimeo_ids": ["148751763", "222384784", "151786524", "76979871", "336812660", "259411563", "169599296", "29474908", "6701902"]
+    },
+    "about": {
+      "padding": "py-32",
+      "layout": "2-column layout. Left: Large poetic studio statement ('We are a boutique studio...'). Right: Disciplines list (Direction, Commercials, Brand Films, Documentary, Digital) and 'Based in Mumbai'.",
+      "typography": "Left side uses massive serif text (text-4xl md:text-5xl). Right side uses structured sans-serif typography."
+    },
+    "contact": {
+      "padding": "py-32 bg-[#1C1B1A] text-[#F7F5F0]",
+      "layout": "Grid cols-1 md:cols-2. Left: Contact details (Email, Phone, Address, Socials). Right: 'Send a brief' Form.",
+      "form_style": "Minimalist fields. Only bottom borders (border-[#5C5A56] focus:border-[#C75D3B]). No background color for inputs. Button should be a pill or sharp rectangle with a white background and black text."
+    },
+    "footer": {
+      "padding": "py-12 bg-[#1C1B1A]",
+      "content": "Minimal. Copyright text. Large 'Paper & Brush' typographic watermark if space permits."
+    }
+  },
+  "components_to_use": {
+    "dialog": "Use Shadcn Dialog for the Vimeo Lightbox (ensure to output .js/.jsx, not .tsx). Must be customized to cover most of the screen (max-w-5xl, bg-black).",
+    "form": "Use Shadcn Form, Input, Textarea. Remove default card look; make them bare, editorial, bottom-border only.",
+    "buttons": "Use Shadcn Button. Override defaults to be poetic (pill or sharp, use brand colors)."
+  },
+  "motion_and_interactions": {
+    "scrolling": "Implement Lenis for smooth scrolling to give a premium, cinematic feel.",
+    "entrance": "Use framer-motion for staggered text reveal on the Hero and About sections (e.g., initial={opacity:0, y:20} animate={opacity:1, y:0}).",
+    "hover": "All clickable items (nav links, films, buttons) must have subtle, intentional transition durations (duration-300)."
+  },
+  "instructions_to_main_agent": [
+    "NOTE: You have .js/.jsx files in this environment, not .tsx. Implement all components (including Shadcn components) using standard JavaScript/JSX syntax without TypeScript annotations.",
+    "Install dependencies: framer-motion, @studio-freight/lenis (or lenis), lucide-react.",
+    "Add the Google Fonts link in the public index.html.",
+    "Use Shadcn CLI to add Dialog, Form, Input, Label, Button. (Adapt to .js if required)",
+    "Do NOT use 'Inter' for text. Use Cormorant Garamond for headings and Outfit for body.",
+    "For the Film Grid, use 'https://vumbnail.com/${vimeoId}.jpg' as the image source.",
+    "When a film thumbnail is clicked, open a Shadcn Dialog. Inside the Dialog content, place a responsive iframe pointing to 'https://player.vimeo.com/video/${vimeoId}?autoplay=1'.",
+    "Keep spacing extremely generous (p-12, py-32). Minimalist editorial design breathes through empty space.",
+    "NEVER use fully transparent backgrounds for the sticky header; it must have a backdrop-blur and a slight fill.",
+    "Add data-testid attributes to all interactive elements (e.g., 'showreel-link', 'contact-form-submit', 'film-card-${id}')."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not converge toward generic 'AI slop' aesthetics. Make the UI distinctive and beautiful.",
+    "Create depth with layered elements and deliberate z-index hierarchies.",
+    "Do not apply `transition: all` globally; apply specific transitions (e.g., `transition-colors`, `transition-transform`).",
+    "Do not center-align everything by default. Left-alignment often works better for readability and poetic tension.",
+    "Ensure every interactive element has a visible focus state for accessibility.",
+    "Never use generic AI emojis in the UI.",
+    "Ensure all images and videos have proper aspect ratios and object-fit properties (e.g., object-cover)."
+  ]
+}
