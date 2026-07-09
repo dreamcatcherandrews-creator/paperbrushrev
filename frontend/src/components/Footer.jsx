@@ -8,13 +8,13 @@ export default function Footer() {
       className="bg-[#1c1b1a] text-[#f7f5f0]"
     >
       <div className="border-t border-[#f7f5f0]/10">
-        <div className="mx-auto max-w-7xl px-6 md:px-12">
-          <p
-            aria-hidden
-            className="select-none whitespace-nowrap py-8 text-center font-serif-display text-[15vw] leading-none tracking-tight text-[#f7f5f0]/10 md:py-12 md:text-[12vw]"
-          >
-            Paper &amp; Brush
-          </p>
+        <div className="mx-auto flex max-w-7xl items-center justify-center px-6 py-12 md:px-12 md:py-16">
+          <img
+            src={SITE.logoHorizontal}
+            alt={SITE.name}
+            className="h-24 w-auto object-contain opacity-90 [filter:brightness(0)_invert(1)] md:h-32"
+            draggable={false}
+          />
         </div>
       </div>
       <div className="border-t border-[#f7f5f0]/10">
