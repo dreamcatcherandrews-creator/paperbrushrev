@@ -38,9 +38,9 @@ export default function Hero() {
             variants={item}
             className="font-serif-display text-5xl font-light leading-[0.98] tracking-tight text-[#1c1b1a] sm:text-6xl lg:text-7xl"
           >
-            From Paper
+            Every Brushstroke
             <span className="mt-2 block italic text-[#c75d3b]">
-              to Picture.
+              Begins a Story.
             </span>
           </motion.h1>
 
