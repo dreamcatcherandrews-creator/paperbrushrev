@@ -4,6 +4,8 @@ export const SITE = {
   wordmarkBottom: "Pictures",
   since: "Since 2017",
   city: "Mumbai",
+  logoHorizontal:
+    "https://customer-assets.emergentagent.com/job_minimal-portfolio-166/artifacts/w7fwyep1_P%26B%20horizontal%20alpha.png",
   logo:
     "https://customer-assets.emergentagent.com/job_minimal-portfolio-166/artifacts/0s3xlhqn_ChatGPT%20Image%20Jul%209%2C%202026%2C%2001_00_18%20PM.png",
   logoUnit:

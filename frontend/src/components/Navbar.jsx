@@ -38,24 +38,14 @@ export default function Navbar() {
         <button
           data-testid="nav-logo"
           onClick={() => go("#top")}
-          className="group flex items-center gap-3 text-left"
+          className="group flex items-center text-left"
         >
-          <span className="relative block h-12 w-12 shrink-0 overflow-hidden md:h-14 md:w-14">
-            <img
-              src={SITE.logoUnit}
-              alt={SITE.name}
-              className="absolute left-1/2 top-1/2 h-[135%] w-[135%] -translate-x-1/2 -translate-y-1/2 object-contain mix-blend-multiply"
-              draggable={false}
-            />
-          </span>
-          <span className="flex flex-col leading-none">
-            <span className="font-serif-display text-2xl tracking-tight text-[#1c1b1a] transition-colors duration-300 group-hover:text-[#c75d3b]">
-              {SITE.wordmarkTop}
-            </span>
-            <span className="mt-0.5 text-[0.6rem] uppercase tracking-[0.5em] text-[#5c5a56]">
-              {SITE.wordmarkBottom}
-            </span>
-          </span>
+          <img
+            src={SITE.logoHorizontal}
+            alt={SITE.name}
+            className="h-10 w-auto object-contain transition-opacity duration-300 group-hover:opacity-80 md:h-12"
+            draggable={false}
+          />
         </button>
 
         <nav className="hidden items-center gap-10 md:flex">
