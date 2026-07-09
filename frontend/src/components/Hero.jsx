@@ -82,11 +82,19 @@ export default function Hero() {
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
           className="relative mx-auto w-full max-w-md"
         >
-          <img
+          <motion.img
             src={SITE.logoUnit}
             alt="Paper & Brush Pictures"
             className="w-full select-none mix-blend-multiply"
             draggable={false}
+            animate={{ y: [0, -14, 0], rotate: [0, -1.2, 0, 1.2, 0] }}
+            transition={{
+              duration: 7,
+              ease: "easeInOut",
+              repeat: Infinity,
+              times: [0, 0.25, 0.5, 0.75, 1],
+            }}
+            style={{ transformOrigin: "50% 90%" }}
           />
         </motion.div>
       </div>
