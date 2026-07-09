@@ -59,7 +59,7 @@ export default function Showreel({ films, onPlay }) {
     >
       <div className="mb-12 border-t border-[#e6e2da] pt-10">
         <h2 className="font-serif-display text-4xl font-light leading-tight tracking-tight text-[#1c1b1a] md:text-5xl">
-          Films we made <span className="italic">happen.</span>
+          Stories we made <span className="italic">happen.</span>
         </h2>
       </div>
 
