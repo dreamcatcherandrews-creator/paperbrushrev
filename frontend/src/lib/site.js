@@ -12,7 +12,7 @@ export const SITE = {
   address:
     "G/604 Spring Grove Uno, Lokhandwala Township, Kandivali East, Mumbai 400100",
   registeredOffice:
-    "Paper & Brush Pictures OPC Private Limited\nPulimmoottu Parambil, Kajiramchira\nAlappuzha, Kerala 688007",
+    "Paper & Brush Pictures OPC Pvt. Ltd.\nPulimmoottu Parambil, Kajiramchira\nAlappuzha, Kerala 688007",
   socials: [
     { label: "Vimeo", href: "https://vimeo.com" },
     { label: "Instagram", href: "https://www.instagram.com/" },
