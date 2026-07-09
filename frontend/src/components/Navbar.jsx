@@ -38,13 +38,24 @@ export default function Navbar() {
         <button
           data-testid="nav-logo"
           onClick={() => go("#top")}
-          className="group flex flex-col leading-none text-left"
+          className="group flex items-center gap-3 text-left"
         >
-          <span className="font-serif-display text-2xl tracking-tight text-[#1c1b1a] transition-colors duration-300 group-hover:text-[#c75d3b]">
-            {SITE.wordmarkTop}
+          <span className="relative block h-12 w-12 shrink-0 overflow-hidden md:h-14 md:w-14">
+            <img
+              src={SITE.logo}
+              alt={SITE.name}
+              className="absolute left-1/2 top-1/2 h-[230%] w-[230%] -translate-x-1/2 -translate-y-1/2 object-contain mix-blend-multiply"
+              style={{ objectPosition: "center 27%" }}
+              draggable={false}
+            />
           </span>
-          <span className="mt-0.5 text-[0.6rem] uppercase tracking-[0.5em] text-[#5c5a56]">
-            {SITE.wordmarkBottom}
+          <span className="flex flex-col leading-none">
+            <span className="font-serif-display text-2xl tracking-tight text-[#1c1b1a] transition-colors duration-300 group-hover:text-[#c75d3b]">
+              {SITE.wordmarkTop}
+            </span>
+            <span className="mt-0.5 text-[0.6rem] uppercase tracking-[0.5em] text-[#5c5a56]">
+              {SITE.wordmarkBottom}
+            </span>
           </span>
         </button>
 
