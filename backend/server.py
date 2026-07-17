@@ -169,10 +169,14 @@ app.include_router(api_router)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_credentials=True,
-    allow_origins=os.environ.get('CORS_ORIGINS', '*').split(','),
+    allow_origins=[
+        "https://paperbrushrev-a9y9rj5mo-paper-brush.vercel.app",
+        "https://paperbrushrev.vercel.app"
+    ],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
+)
 )
 
 logging.basicConfig(
