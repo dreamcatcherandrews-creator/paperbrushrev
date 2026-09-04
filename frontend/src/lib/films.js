@@ -1,0 +1,63 @@
+export const FEATURED = {
+  id: "featured-ai-short",
+  title: "Where Do The Strays Go — An AI Short",
+  category: "Featured Film",
+  year: "2024",
+  provider: "youtube",
+  video_id: "WmtGrkCIS-M",
+  thumbnail: "https://img.youtube.com/vi/WmtGrkCIS-M/maxresdefault.jpg",
+};
+
+const FILMS_SEED = [
+  ["Freecharge UPI — Million Reddy", "Commercial", "2022", "734812627"],
+  ["Plum Goodness — Vitamin C Serum", "Brand Film", "2022", "685968911"],
+  ["Yamaha Ray ZR", "Commercial", "2021", "615885896"],
+  ["Freecharge PayLater — Million Reddy", "Commercial", "2021", "615882895"],
+  ["RE Meteor 350 — Handle Everything", "Commercial", "2021", "579718032"],
+  ["RE Meteor 350 — Glide Effortlessly", "Commercial", "2021", "579717941"],
+  ["TVS Apache RTR 200 4V", "Commercial", "2020", "475515956"],
+  ["Yera Glassware", "Brand Film", "2020", "450522184"],
+  ["Yardley Essentials — Onam", "Commercial", "2020", "450518515"],
+  ["Nivea Handcream — Diwali", "Commercial", "2019", "376508291"],
+  ["Hero Xpulse 200 — Adventure Series", "Commercial", "2019", "367463418"],
+  ["Hero Xpulse 200T — Find Your Pack", "Commercial", "2019", "367463396"],
+  ["Hero Xpulse 200T — Destination", "Commercial", "2019", "367463379"],
+  ["Nivea Handcream — Pujo", "Commercial", "2019", "365858254"],
+  ["Hero Xpulse 200 — Adventure", "Commercial", "2019", "365856771"],
+  ["Hero Xpulse 200T — Social Network", "Commercial", "2019", "365856735"],
+  ["Hero Xpulse 200T — Long Road", "Commercial", "2019", "365856651"],
+  [
+    "Nivea Soft — Berry Blossom · Chilled Mint · Tropical Fruits",
+    "Commercial",
+    "2019",
+    "352507369",
+  ],
+  ["Joy Princess", "Commercial", "2018", "294836393"],
+  ["Oreo Lemon Twist", "Commercial", "2018", "283080685"],
+  ["Shell Helix — Mechanicure", "Brand Film", "2017", "225870299"],
+  ["Shell Advance — The Ride", "Brand Film", "2017", "223901975"],
+  ["Pro Kabaddi League — The Battle Is On", "Commercial", "2017", "198356521"],
+  ["TATA AIA — Rohin Sherdilwala", "Commercial", "2017", "198328208"],
+  ["Star Plus Nayi Soch — Viraat", "Commercial", "2017", "198327224"],
+  ["Standard Chartered Mumbai Marathon", "Brand Film", "2017", "198326906"],
+  ["Star Plus Nayi Soch — MSD", "Commercial", "2017", "198326258"],
+  ["Joy — Bharti Singh", "Commercial", "2017", "198325848"],
+  ["TATA AIA — Harjeet Sethi", "Commercial", "2016", "135859644"],
+  ["TATA AIA — Anahita", "Commercial", "2016", "135853909"],
+  ["Ananthaal", "Documentary", "2015", "121367646"],
+  ["Right to Education — Anthem", "Documentary", "2014", "105737183"],
+  ["Finding a Voice", "Documentary", "2014", "105218882"],
+];
+
+export const FILMS = FILMS_SEED.map(
+  ([title, category, year, video_id], order) => ({
+    id: `film-${video_id}`,
+    title,
+    category,
+    year,
+    provider: "vimeo",
+    video_id,
+    order,
+    thumbnail: `https://vumbnail.com/${video_id}.jpg`,
+  })
+);
