@@ -1,8 +1,14 @@
 import React from "react";
-import { Dialog, DialogContent, DialogTitle, DialogDescription } from "./ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogDescription,
+} from "./ui/dialog";
 
 export default function FilmDialog({ film, onClose }) {
   const open = Boolean(film);
+
   const src = film
     ? film.provider === "youtube"
       ? `https://www.youtube.com/embed/${film.video_id}?autoplay=1&rel=0`
@@ -17,8 +23,9 @@ export default function FilmDialog({ film, onClose }) {
       >
         <DialogTitle className="sr-only">{film?.title || "Film"}</DialogTitle>
         <DialogDescription className="sr-only">
-          {film ? `${film.category} · ${film.year}` : "Film player"}
+          {film ? `${film.title} video` : "Film player"}
         </DialogDescription>
+
         {film && (
           <div>
             <div className="aspect-video w-full bg-black">
@@ -32,13 +39,11 @@ export default function FilmDialog({ film, onClose }) {
                 allowFullScreen
               />
             </div>
-            <div className="flex flex-wrap items-baseline justify-between gap-2 px-6 py-4">
+
+            <div className="px-6 py-4">
               <h3 className="font-serif-display text-2xl text-[#f7f5f0]">
                 {film.title}
               </h3>
-              <span className="text-xs uppercase tracking-[0.25em] text-[#c75d3b]">
-                {film.year}
-              </span>
             </div>
           </div>
         )}

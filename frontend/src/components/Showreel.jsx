@@ -7,6 +7,7 @@ const FALLBACK =
 
 function FilmCard({ film, index, onPlay }) {
   const [src, setSrc] = useState(film.thumbnail);
+
   return (
     <motion.button
       data-testid={`film-card-${film.video_id}`}
@@ -38,13 +39,11 @@ function FilmCard({ film, index, onPlay }) {
           </span>
         </div>
       </div>
-      <div className="mt-4 flex items-baseline justify-between gap-3">
+
+      <div className="mt-4">
         <h3 className="font-serif-display text-xl leading-snug text-[#1c1b1a] transition-colors duration-300 group-hover:text-[#c75d3b]">
           {film.title}
         </h3>
-        <span className="shrink-0 text-[0.65rem] uppercase tracking-[0.2em] text-[#5c5a56]">
-          {film.year}
-        </span>
       </div>
     </motion.button>
   );
